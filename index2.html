@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Ларионов Владимир</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f0f0; /* Slightly lighter background */
+            line-height: 1.6; /* Improved readability */
+        }
+        .container {
+            width: 80%;
+            max-width: 600px; /* Reduced width for better mobile view */
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px; /* Smoother corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly more subtle shadow */
+        }
+        h1, h2 {
+            color: #007bff; /* Darker, consistent color */
+            font-weight: 500; /* More subtle weight */
+        }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .contact-info {
+            margin-top: 20px;
+            display: grid; /* Grid layout for better organization */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+            gap: 10px;
+            font-size: 0.95em;
+        }
+        .contact-info div {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info i {
+            color: #007bff; /* Consistent icon color */
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+         a {
+            color: #0056b3; /* Consistent link color */
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth hover effect */
+        }
+        a:hover {
+            color: #003a7d; /* Darker on hover */
+        }
+        .skills, .languages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .skill, .language {
+            background-color: #e0f7fa; /* Lighter shade */
+            color: #007bff; /* Consistent skill color */
+            padding: 5px 10px;
+            border-radius: 5px; /* Slightly softer radius */
+            font-size: 0.9em;
+            text-transform: capitalize;
+        }
+        .about p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+         /* Translation button */
+        .translate-button {
+            background-color: #4CAF50; /* Green background */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .translate-button:hover {
+           background-color: #45a049;
+        }
+
+    </style>
+    <script>
+        function changeLanguage() {
+            // Logic to switch language, currently just toggles visibility
+            const englishContent = document.getElementById("english-content");
+            const russianContent = document.getElementById("russian-content");
+
+            englishContent.style.display = englishContent.style.display === "none" ? "block" : "none";
+            russianContent.style.display = russianContent.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ларионов Владимир Владимирович</h1>
+        <div class="contact-info">
+            <div><i class="fas fa-phone-alt"></i>+7 (906) 849-2282</div>
+            <div><i class="fas fa-envelope"></i>lvv2006.larionov@yandex.ru</div>
+            <div><i class="fas fa-map-marker-alt"></i>Санкт-Петербург, м. Проспект Славы</div>
+            <div><i class="fab fa-vk"></i> <a href="https://vk.com/harfile" target="_blank">vk.com</a></div>
+            <div><i class="fab fa-github"></i> <a href="https://github.com/arfshukhov" target="_blank">github.com</a></div>
+            <div><button class="translate-button" onclick="changeLanguage()">English</button></div>
+        </div>
+
+    </div>
+    </body>
+</html>
