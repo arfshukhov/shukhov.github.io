@@ -12,21 +12,21 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f0f0f0; /* Slightly lighter background */
-            line-height: 1.6; /* Improved readability */
+            background-color: #f0f0f0;
+            line-height: 1.6;
         }
         .container {
             width: 80%;
-            max-width: 600px; /* Reduced width for better mobile view */
+            max-width: 600px;
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
-            border-radius: 8px; /* Smoother corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly more subtle shadow */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #007bff; /* Darker, consistent color */
-            font-weight: 500; /* More subtle weight */
+            color: #007bff;
+            font-weight: 500;
         }
         h1 {
             font-size: 1.8em;
@@ -41,8 +41,8 @@
         }
         .contact-info {
             margin-top: 20px;
-            display: grid; /* Grid layout for better organization */
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
             font-size: 0.95em;
         }
@@ -51,29 +51,29 @@
             align-items: center;
         }
         .contact-info i {
-            color: #007bff; /* Consistent icon color */
+            color: #007bff;
             margin-right: 8px;
             font-size: 1.2em;
         }
-         a {
-            color: #0056b3; /* Consistent link color */
+        a {
+            color: #0056b3;
             text-decoration: none;
-            transition: color 0.3s; /* Smooth hover effect */
+            transition: color 0.3s;
         }
         a:hover {
-            color: #003a7d; /* Darker on hover */
+            color: #003a7d;
         }
         .skills, .languages {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 10px;
             margin-top: 10px;
         }
         .skill, .language {
-            background-color: #e0f7fa; /* Lighter shade */
-            color: #007bff; /* Consistent skill color */
+            background-color: #e0f7fa;
+            color: #007bff;
             padding: 5px 10px;
-            border-radius: 5px; /* Slightly softer radius */
+            border-radius: 5px;
             font-size: 0.9em;
             text-transform: capitalize;
         }
@@ -85,7 +85,7 @@
 
          /* Translation button */
         .translate-button {
-            background-color: #4CAF50; /* Green background */
+            background-color: #4CAF50;
             border: none;
             color: white;
             padding: 10px 15px;
@@ -101,31 +101,188 @@
         .translate-button:hover {
            background-color: #45a049;
         }
-
+        #english-content {
+            display: none; /* Initially hide the English content */
+        }
+        .section {
+          margin-top: 20px;
+        }
+         .item-title {
+            font-weight: 500;
+        }
+        .item-subtitle {
+            font-size: 0.95em;
+            color: #777;
+        }
+        .item-desc {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #444;
+        }
     </style>
     <script>
         function changeLanguage() {
-            // Logic to switch language, currently just toggles visibility
-            const englishContent = document.getElementById("english-content");
+             const englishContent = document.getElementById("english-content");
             const russianContent = document.getElementById("russian-content");
 
             englishContent.style.display = englishContent.style.display === "none" ? "block" : "none";
             russianContent.style.display = russianContent.style.display === "none" ? "block" : "none";
-        }
+            }
+
     </script>
 </head>
 <body>
     <div class="container">
-        <h1>Ларионов Владимир Владимирович</h1>
-        <div class="contact-info">
-            <div><i class="fas fa-phone-alt"></i>+7 (906) 849-2282</div>
-            <div><i class="fas fa-envelope"></i>lvv2006.larionov@yandex.ru</div>
-            <div><i class="fas fa-map-marker-alt"></i>Санкт-Петербург, м. Проспект Славы</div>
-            <div><i class="fab fa-vk"></i> <a href="https://vk.com/harfile" target="_blank">vk.com</a></div>
-            <div><i class="fab fa-github"></i> <a href="https://github.com/arfshukhov" target="_blank">github.com</a></div>
-            <div><button class="translate-button" onclick="changeLanguage()">English</button></div>
-        </div>
+       <div id="russian-content">
+            <h1>Ларионов Владимир Владимирович</h1>
+             <div class="contact-info">
+                <div><i class="fas fa-phone-alt"></i>+7 (906) 849-2282</div>
+                <div><i class="fas fa-envelope"></i>lvv2006.larionov@yandex.ru</div>
+                <div><i class="fas fa-map-marker-alt"></i>Санкт-Петербург, м. Проспект Славы</div>
+                <div><i class="fab fa-vk"></i> <a href="https://vk.com/harfile" target="_blank">vk.com</a></div>
+                <div><i class="fab fa-github"></i> <a href="https://github.com/arfshukhov" target="_blank">github.com</a></div>
+               <div><button class="translate-button" onclick="changeLanguage()">English</button></div>
+             </div>
+            <h2>Желаемая должность</h2>
+            <div>Backend-разработчик</div>
 
+            <h2>Опыт работы</h2>
+            <div class="experience">
+                <div class="item-title">Российский государственный педагогический университет им. А.И. Герцена</div>
+                <div class="item-subtitle">Июнь 2023 — Ноябрь 2024 (1 год, 6 месяцев)</div>
+                <div class="item-desc">Backend-разработчик: Разрабатывал сервис учета студентов в интересах Института Физической Культуры.
+                    Принимал участие в архитектурных решениях, проектировал базы данных. Разработал микросервисы учета результатов ГТО, теоретической подготовки
+                    и сдачи нормативов.
+                </div>
+            </div>
+
+            <h2>Образование</h2>
+            <div class="education">
+                <div class="item-title">Российский государственный педагогический университет им. А.И. Герцена</div>
+                <div class="item-subtitle">2028, Институт информационных технологий, Интеллектуальные информационные системы</div>
+            </div>
+
+            <h2>Курсы</h2>
+            <div class="courses">
+                <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Основы промышленной разработки на Python</a>, Яндекс.Лицей</div>
+                <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Основы программирования на Python</a>, Яндекс.Лицей</div>
+            </div>
+
+            <h2>Электронные сертификаты</h2>
+            <div class="certificates">
+                <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Основы Промышленной Разработки на Python</a></div>
+                <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Основы Программирования на Языке Python</a></div>
+            </div>
+
+            <h2>Навыки</h2>
+            <div class="skills">
+                <div class="skill">FastAPI</div>
+                <div class="skill">Python</div>
+                <div class="skill">SQLAlchemy</div>
+                <div class="skill">SQL</div>
+                <div class="skill">JSON API</div>
+                <div class="skill">SQLite</div>
+                <div class="skill">PostgreSQL</div>
+                <div class="skill">Git</div>
+                <div class="skill">C++</div>
+                <div class="skill">MVC</div>
+                <div class="skill">Qt</div>
+                <div class="skill">Flask</div>
+                <div class="skill">HTML5</div>
+                 <div class="skill">STL</div>
+                 <div class="skill">CSS</div>
+            </div>
+
+            <h2>Знание языков</h2>
+            <div class="languages">
+                <div class="language">Русский — Родной</div>
+                <div class="language">Английский — B1 (Средний)</div>
+            </div>
+
+            <h2>Обо мне</h2>
+            <div class="about">
+                <p>Опыт разработки – 3 года. Основной стек: Python (основной язык), Flask и FastAPI (опыт разработки серверных API и веб-интерфейсов), SQLite и PostgreSQL (СУБД, работаю преимущественно с ORM), Git (использую графическую оболочку).</p>
+                <p>Уверенные знания в HTTP, RestAPI, JSON, OpenAPI; некоторый опыт работы с асинхронностью и многопоточностью. Docker – умею работать и создавать Dockerfile.</p>
+                <p>Предпочитаю удаленную работу или комбинированную занятость, готов обсудить график. Небольшой коммерческий опыт: проект по учету студентов в университете, который сдаем в декабре 2024.</p>
+                <p>В армии не служил и пока не планирую, так как учусь. Надеюсь на продуктивное собеседование и удачное сотрудничество!</p>
+            </div>
+       </div>
+        <div id="english-content" style="display: none;">
+           <h1>Vladimir Larionov</h1>
+           <div class="contact-info">
+                <div><i class="fas fa-phone-alt"></i>+7 (906) 849-2282</div>
+                <div><i class="fas fa-envelope"></i>lvv2006.larionov@yandex.ru</div>
+                <div><i class="fas fa-map-marker-alt"></i>Saint-Petersburg, Prospekt Slavy Metro</div>
+                <div><i class="fab fa-vk"></i> <a href="https://vk.com/harfile" target="_blank">vk.com/harfile</a></div>
+                <div><i class="fab fa-github"></i> <a href="https://github.com/arfshukhov" target="_blank">github.com/arfshukhov</a></div>
+               <div><button class="translate-button" onclick="changeLanguage()">Russian</button></div>
+            </div>
+
+            <h2>Desired Position</h2>
+            <div>Backend Developer</div>
+
+            <h2>Work Experience</h2>
+            <div class="experience">
+                 <div class="item-title">Herzen State Pedagogical University of Russia</div>
+                <div class="item-subtitle">June 2023 — November 2024 (1 year, 6 months)</div>
+                <div class="item-desc">Backend Developer: Developed a student tracking service for the Institute of Physical Culture.
+                     Participated in architectural decisions, designed databases. Developed microservices for tracking GTO results, theoretical training,
+                     and standards testing.
+                 </div>
+            </div>
+
+            <h2>Education</h2>
+            <div class="education">
+                 <div class="item-title">Herzen State Pedagogical University of Russia</div>
+                <div class="item-subtitle">2028, Institute of Information Technology, Intelligent Information Systems</div>
+            </div>
+
+            <h2>Courses</h2>
+            <div class="courses">
+               <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Foundations of Industrial Development in Python</a>, Yandex.Lyceum</div>
+                <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Fundamentals of Programming in Python</a>, Yandex.Lyceum</div>
+            </div>
+
+            <h2>Electronic Certificates</h2>
+             <div class="certificates">
+                <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Foundations of Industrial Development in Python</a></div>
+               <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Fundamentals of Programming in Python</a></div>
+            </div>
+
+             <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">FastAPI</div>
+                <div class="skill">Python</div>
+                <div class="skill">SQLAlchemy</div>
+                <div class="skill">SQL</div>
+                <div class="skill">JSON API</div>
+                <div class="skill">SQLite</div>
+                <div class="skill">PostgreSQL</div>
+                <div class="skill">Git</div>
+                <div class="skill">C++</div>
+                <div class="skill">MVC</div>
+                <div class="skill">Qt</div>
+                <div class="skill">Flask</div>
+                <div class="skill">HTML5</div>
+                <div class="skill">STL</div>
+                <div class="skill">CSS</div>
+            </div>
+
+            <h2>Languages</h2>
+            <div class="languages">
+                <div class="language">Russian — Native</div>
+                <div class="language">English — B1 (Intermediate)</div>
+            </div>
+
+           <h2>About me</h2>
+            <div class="about">
+               <p>3 years of development experience. Main stack: Python (main language), Flask and FastAPI (experience in developing server APIs and web interfaces), SQLite and PostgreSQL (DBMS, primarily work with ORM), Git (using graphical shell).</p>
+                <p>Solid knowledge in HTTP, RestAPI, JSON, OpenAPI; some experience with asynchronous and multithreading. Docker – know how to work and create Dockerfiles.</p>
+                 <p>I prefer remote work or a combined schedule, I am ready to discuss the schedule. Small commercial experience: a project for accounting students at a university, which we are submitting in December 2024.</p>
+               <p>I have not served in the army and do not plan to yet, as I am studying. I hope for a productive interview and successful cooperation!</p>
+            </div>
+
+        </div>
     </div>
-    </body>
+</body>
 </html>
