@@ -14,11 +14,11 @@
             color: #333;
             background-color: #f0f0f0;
             line-height: 1.6;
-            transition: background-color 0.3s ease; /* Smooth background transition */
+            transition: background-color 0.3s ease;
         }
 
         body:hover {
-            background-color: #e8f0fe; /* Light background on hover */
+            background-color: #e8f0fe;
         }
 
         .container {
@@ -28,8 +28,8 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
-            transition: transform 0.3s ease; /* Scale on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
         }
 
         .container:hover {
@@ -39,15 +39,15 @@
         h1, h2 {
             color: #007bff;
             font-weight: 500;
-            opacity: 0; /* Start with 0 opacity for animation */
+            opacity: 0;
             transform: translateY(-20px);
-            animation: fadeInSlideDown 0.6s ease forwards; /* Apply animation */
+            animation: fadeInSlideDown 0.6s ease forwards;
         }
 
         h1 {
             font-size: 2em;
             margin-bottom: 15px;
-            animation-delay: 0.1s; /* Delay animation for h1 */
+            animation-delay: 0.1s;
         }
 
         h2 {
@@ -65,13 +65,12 @@
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             font-size: 1em;
-            opacity: 0; /* Start with 0 opacity for animation */
+            opacity: 0;
             animation: fadeIn 0.6s ease forwards;
             animation-delay: 0.3s;
-
         }
 
-         .contact-info div {
+        .contact-info div {
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -82,33 +81,34 @@
             margin-right: 10px;
             font-size: 1.3em;
             flex-shrink: 0;
-             transition: transform 0.3s ease; /* Icon rotation on hover */
+            transition: transform 0.3s ease;
         }
 
-          .contact-info div:hover i {
-             transform: rotate(360deg);
-         }
+        .contact-info div:hover i {
+            transform: rotate(360deg);
+        }
 
         .contact-info span {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-         }
-         .contact-info a {
-             transition: color 0.3s ease; /* Smooth text color on hover */
-         }
+        }
+
+        .contact-info a {
+            transition: color 0.3s ease;
+        }
+
         a {
             color: #0056b3;
             text-decoration: none;
             transition: color 0.3s;
-             text-shadow: 1px 1px 2px #0000001f; /*Text shadow effect*/
-         }
+            text-shadow: 1px 1px 2px #0000001f;
+        }
 
-
-          a:hover {
+        a:hover {
             color: #003a7d;
-             text-shadow: 2px 2px 4px #0000001f;
-         }
+            text-shadow: 2px 2px 4px #0000001f;
+        }
 
         .skills, .languages {
             display: grid;
@@ -127,13 +127,13 @@
             border-radius: 7px;
             font-size: 1em;
             text-transform: capitalize;
-            transition: transform 0.2s ease, box-shadow 0.2s ease; /*Scale and shadow on hover*/
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .skill:hover, .language:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
 
         .about p {
             margin-top: 15px;
@@ -142,10 +142,8 @@
             opacity: 0;
             animation: fadeIn 0.6s ease forwards;
             animation-delay: 0.5s;
-
         }
 
-        /* Translation button */
         .translate-button {
             background-color: #4CAF50;
             border: none;
@@ -159,8 +157,7 @@
             border-radius: 7px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
-             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .translate-button:hover {
@@ -168,46 +165,53 @@
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
+
         #english-content {
             display: none;
         }
+
         .section {
-           margin-top: 25px;
-         }
-         .item-title {
-           font-weight: 500;
+            margin-top: 25px;
+        }
+
+        .item-title {
+            font-weight: 500;
             opacity: 0;
             transform: translateX(-20px);
             animation: fadeInSlideRight 0.6s ease forwards;
             animation-delay: 0.5s;
-         }
-        .item-subtitle {
-             font-size: 1em;
-            color: #777;
-             opacity: 0;
-            transform: translateX(20px);
-             animation: fadeInSlideLeft 0.6s ease forwards;
-              animation-delay: 0.6s;
+        }
 
-         }
+        .item-subtitle {
+            font-size: 1em;
+            color: #777;
+            opacity: 0;
+            transform: translateX(20px);
+            animation: fadeInSlideLeft 0.6s ease forwards;
+            animation-delay: 0.6s;
+        }
+
         .item-desc {
             margin-top: 7px;
             font-size: 1em;
             color: #444;
-             opacity: 0;
-             animation: fadeIn 0.6s ease forwards;
-            animation-delay: 0.7s;
-          }
-          .experience {
-             margin-bottom: 20px;
-          }
-           .certificates {
-            margin-top: 25px;
-              opacity: 0;
+            opacity: 0;
             animation: fadeIn 0.6s ease forwards;
             animation-delay: 0.7s;
-           }
-          /* Animations */
+        }
+
+        .experience {
+            margin-bottom: 20px;
+        }
+
+        .certificates {
+            margin-top: 25px;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+            animation-delay: 0.7s;
+        }
+
+        /* Animations */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -216,7 +220,8 @@
                 opacity: 1;
             }
         }
-         @keyframes fadeInSlideRight {
+
+        @keyframes fadeInSlideRight {
             from {
                 opacity: 0;
                 transform: translateX(-20px);
@@ -226,20 +231,22 @@
                 transform: translateX(0);
             }
         }
+
         @keyframes fadeInSlideLeft {
             from {
-               opacity: 0;
-               transform: translateX(20px);
+                opacity: 0;
+                transform: translateX(20px);
             }
             to {
                 opacity: 1;
-                 transform: translateX(0);
+                transform: translateX(0);
             }
         }
+
         @keyframes fadeInSlideDown {
             from {
-                 opacity: 0;
-                 transform: translateY(-20px);
+                opacity: 0;
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
@@ -247,29 +254,29 @@
             }
         }
 
+
     </style>
     <script>
         function changeLanguage() {
-             const englishContent = document.getElementById("english-content");
+            const englishContent = document.getElementById("english-content");
             const russianContent = document.getElementById("russian-content");
 
             englishContent.style.display = englishContent.style.display === "none" ? "block" : "none";
             russianContent.style.display = russianContent.style.display === "none" ? "block" : "none";
-            }
-
+        }
     </script>
 </head>
 <body>
     <div class="container">
-       <div id="russian-content">
+        <div id="russian-content">
             <h1>Ларионов Владимир Владимирович</h1>
-             <div class="contact-info">
+            <div class="contact-info">
                 <div><i class="fas fa-envelope"></i>lvv2006.larionov@yandex.ru</div>
                 <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Санкт-Петербург, м. Проспект Славы</span></div>
                 <div><i class="fab fa-telegram"></i> <a href="https://t.me/Xarfile" target="_blank">t.me</a></div>
                 <div><i class="fab fa-github"></i> <a href="https://github.com/shukhov" target="_blank">github.com</a></div>
-               <div><button class="translate-button" onclick="changeLanguage()">English</button></div>
-             </div>
+                <div><button class="translate-button" onclick="changeLanguage()">English</button></div>
+            </div>
             <h2>Желаемая должность</h2>
             <div>Backend-разработчик</div>
 
@@ -281,21 +288,20 @@
                     Принимал участие в архитектурных решениях, проектировал базы данных. Разработал микросервисы учета результатов ГТО, теоретической подготовки
                     и сдачи нормативов.
                     <div class="item-desc">
-                    Стэк: Python, FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy, OpenAPI, Swagger, Celery, Redis
+                        Стэк: Python, FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy, OpenAPI, Swagger, Celery, Redis
                     </div>
                 </div>
             </div>
-           <div class="experience">
+            <div class="experience">
                 <div class="item-title">Extra Logic</div>
                 <div class="item-subtitle">Май 2022 — Ноябрь 2022 (7 месяцев)</div>
                 <div class="item-desc">Стажер-разработчик: Проходил стажировку, реализовывал API аналога OpenAI Forms.
-                  Разрабатывал бэкенд, обеспечивая интеграцию с базой данных. Занимался написанием тестов, для обеспечения стабильной работы сервиса.
-                  <div class="item-desc">
-                  Стэк: Python, Flask, Peewee ORM, SQLite
-                  </div>
+                    Разрабатывал бэкенд, обеспечивая интеграцию с базой данных. Занимался написанием тестов, для обеспечения стабильной работы сервиса.
+                    <div class="item-desc">
+                        Стэк: Python, Flask, Peewee ORM, SQLite
+                    </div>
                 </div>
             </div>
-
 
             <h2>Образование</h2>
             <div class="education">
@@ -314,7 +320,7 @@
             <div class="item-title"><a href="https://www.dropbox.com/scl/fi/f8mp0r0l4bk80b3wqp6h6/00777b919d6fe9d4777e700d64d751cc.pdf?rlkey=omubkedcfgn3okzuhl8m84jro&st=a3nupt52&dl=0" target="_blank">Благодарность за участие в разработке цифровой программы
                 «Физическая культура и здоровье»</a></div>
             </div>
-            </div>
+
 
             <h2>Навыки</h2>
             <div class="skills">
@@ -350,77 +356,76 @@
                 <p>Опыт разработки – 3 года. Основной стек: Python (основной язык), Flask и FastAPI (опыт разработки серверных API и веб-интерфейсов), SQLite и PostgreSQL (СУБД, работаю преимущественно с ORM), Git (использую графическую оболочку).</p>
                 <p>Уверенные знания в HTTP, RestAPI, JSON, OpenAPI; некоторый опыт работы с асинхронностью и многопоточностью. Docker – умею работать и создавать Dockerfile.</p>
                 <p>Предпочитаю удаленную работу или комбинированную занятость, готов обсудить график. Небольшой коммерческий опыт: проект по учету студентов в университете, который сдаем в декабре 2024.</p>
-               <p>В армии не служил и пока не планирую, так как учусь. Надеюсь на удачное сотрудничество!</p>
+                <p>В армии не служил и пока не планирую, так как учусь. Надеюсь на удачное сотрудничество!</p>
             </div>
-       </div>
+        </div>
         <div id="english-content" style="display: none;">
-           <h1>Vladimir Larionov</h1>
-           <div class="contact-info">
+            <h1>Vladimir Larionov</h1>
+            <div class="contact-info">
                 <div><i class="fas fa-envelope"></i>lvv2006.larionov@yandex.ru</div>
                 <div><i class="fas fa-map-marker-alt"></i><span>Saint-Petersburg, Prospekt Slavy Metro</span></div>
-                 <div><i class="fab fa-telegram"></i> <a href="https://t.me/Xarfile" target="_blank">t.me</a></div>
+                <div><i class="fab fa-telegram"></i> <a href="https://t.me/Xarfile" target="_blank">t.me</a></div>
                 <div><i class="fab fa-github"></i> <a href="https://github.com/shukhov" target="_blank">github.com</a></div>
-               <div><button class="translate-button" onclick="changeLanguage()">Russian</button></div>
+                <div><button class="translate-button" onclick="changeLanguage()">Russian</button></div>
             </div>
 
             <h2>Desired Position</h2>
             <div>Backend Developer</div>
 
-             <h2>Work Experience</h2>
+            <h2>Work Experience</h2>
             <div class="experience">
-                 <div class="item-title">Herzen State Pedagogical University of Russia</div>
+                <div class="item-title">Herzen State Pedagogical University of Russia</div>
                 <div class="item-subtitle">June 2023 — November 2024 (1 year, 6 months)</div>
                 <div class="item-desc">Backend Developer: Developed a student tracking service for the Institute of Physical Culture.
                      Participated in architectural decisions, designed databases. Developed microservices for tracking GTO results, theoretical training,
                      and standards testing.
-                <div class="item-desc">
-                     Stack: Python, FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy, OpenAPI, Swagger, Celery, Redis
+                    <div class="item-desc">
+                        Stack: Python, FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy, OpenAPI, Swagger, Celery, Redis
+                    </div>
                 </div>
-                 </div>
-             </div>
+            </div>
             <div class="experience">
                 <div class="item-title">Extra Logic, Omsk</div>
-                 <div class="item-subtitle">May 2022 — November 2022 (7 months)</div>
+                <div class="item-subtitle">May 2022 — November 2022 (7 months)</div>
                 <div class="item-desc">Intern Developer: Completed an internship, implementing an API analog of OpenAI Forms.
                   Developed the backend, providing integration with the database. Wrote tests to ensure stable operation of the service.
-                  <div class="item-desc">
-                  Stack: Python, Flask, Peewee ORM, SQLite
-                  </div>
+                    <div class="item-desc">
+                        Stack: Python, Flask, Peewee ORM, SQLite
+                    </div>
                 </div>
             </div>
 
-
             <h2>Education</h2>
             <div class="education">
-                 <div class="item-title">Herzen State Pedagogical University of Russia</div>
+                <div class="item-title">Herzen State Pedagogical University of Russia</div>
                 <div class="item-subtitle">2028, Institute of Information Technology, Intelligent Information Systems</div>
             </div>
 
             <h2>Courses</h2>
             <div class="courses">
-               <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Foundations of Industrial Development in Python</a>, Yandex.Lyceum</div>
+                <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Foundations of Industrial Development in Python</a>, Yandex.Lyceum</div>
                 <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Fundamentals of Programming in Python</a>, Yandex.Lyceum</div>
             </div>
 
             <h2>Electronic Certificates</h2>
-             <div class="certificates">
-                <div class="item-title"><a href="https://www.dropbox.com/scl/fi/f8mp0r0l4bk80b3wqp6h6/00777b919d6fe9d4777e700d64d751cc.pdf?rlkey=omubkedcfgn3okzuhl8m84jro&st=a3nupt52&dl=0" target="_blank">Gratitude for participation in the development of the digital program "Physical Culture and Health"</a></div>
-            </div>
+            <div class="certificates">
+                 <div class="item-title"><a href="https://www.dropbox.com/scl/fi/f8mp0r0l4bk80b3wqp6h6/00777b919d6fe9d4777e700d64d751cc.pdf?rlkey=omubkedcfgn3okzuhl8m84jro&st=a3nupt52&dl=0" target="_blank">Gratitude for participation in the development of the digital program "Physical Culture and Health"</a></div>
+           </div>
 
-             <h2>Skills</h2>
+            <h2>Skills</h2>
             <div class="skills">
                 <div class="skill">FastAPI</div>
                 <div class="skill">Python</div>
                 <div class="skill">SQLAlchemy</div>
                 <div class="skill">SQL</div>
-                  <div class="skill">REST API</div>
+                 <div class="skill">REST API</div>
                  <div class="skill">JSON API</div>
                 <div class="skill">SQLite</div>
                 <div class="skill">PostgreSQL</div>
                  <div class="skill">Celery</div>
                 <div class="skill">Redis</div>
-                <div class="skill">OpenAPI</div>
-                  <div class="skill">Swagger</div>
+                 <div class="skill">OpenAPI</div>
+                <div class="skill">Swagger</div>
                  <div class="skill">Git</div>
                 <div class="skill">C++</div>
                 <div class="skill">MVC</div>
@@ -436,14 +441,13 @@
                 <div class="language">English — B1 (Intermediate)</div>
             </div>
 
-           <h2>About me</h2>
+            <h2>About me</h2>
             <div class="about">
-               <p>3 years of development experience. Main stack: Python (main language), Flask and FastAPI (experience in developing server APIs and web interfaces), SQLite and PostgreSQL (DBMS, primarily work with ORM), Git (using graphical shell).</p>
+                <p>3 years of development experience. Main stack: Python (main language), Flask and FastAPI (experience in developing server APIs and web interfaces), SQLite and PostgreSQL (DBMS, primarily work with ORM), Git (using graphical shell).</p>
                 <p>Solid knowledge in HTTP, RestAPI, JSON, OpenAPI; some experience with asynchronous and multithreading. Docker – know how to work and create Dockerfiles.</p>
-                 <p>I prefer remote work or a combined schedule, I am ready to discuss the schedule. Small commercial experience: a project for accounting students at a university, which we are submitting in December 2024.</p>
-               <p>I have not served in the army and do not plan to yet, as I am studying. I hope for a successful cooperation!</p>
+                <p>I prefer remote work or a combined schedule, I am ready to discuss the schedule. Small commercial experience: a project for accounting students at a university, which we are submitting in December 2024.</p>
+                <p>I have not served in the army and do not plan to yet, as I am studying. I hope for a successful cooperation!</p>
             </div>
-
         </div>
     </div>
 </body>
