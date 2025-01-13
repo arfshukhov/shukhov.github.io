@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,119 +14,239 @@
             color: #333;
             background-color: #f0f0f0;
             line-height: 1.6;
+            transition: background-color 0.3s ease; /* Smooth background transition */
         }
+
+        body:hover {
+            background-color: #e8f0fe; /* Light background on hover */
+        }
+
         .container {
             width: 80%;
             max-width: 600px;
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+            transition: transform 0.3s ease; /* Scale on hover */
         }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
         h1, h2 {
             color: #007bff;
             font-weight: 500;
+            opacity: 0; /* Start with 0 opacity for animation */
+            transform: translateY(-20px);
+            animation: fadeInSlideDown 0.6s ease forwards; /* Apply animation */
         }
+
         h1 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            font-size: 2em;
+            margin-bottom: 15px;
+            animation-delay: 0.1s; /* Delay animation for h1 */
         }
+
         h2 {
-            font-size: 1.5em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+            font-size: 1.7em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 7px;
+            animation-delay: 0.2s;
         }
+
         .contact-info {
-            margin-top: 20px;
+            margin-top: 25px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            font-size: 0.95em;
-        }
-        .contact-info div {
-            display: flex;
-            align-items: center;
-            overflow: hidden; /* Prevent content overflow */
-        }
-        .contact-info i {
-            color: #007bff;
-            margin-right: 8px;
-            font-size: 1.2em;
-             flex-shrink: 0;  /*prevent icon from shrinking */
+            gap: 15px;
+            font-size: 1em;
+            opacity: 0; /* Start with 0 opacity for animation */
+            animation: fadeIn 0.6s ease forwards;
+            animation-delay: 0.3s;
 
         }
-         .contact-info span {
-             white-space: nowrap; /* Prevent text from wrapping */
-              overflow: hidden; /* Prevent text from overflowing the container */
-              text-overflow: ellipsis; /* Show ellipsis (...) if text overflows */
-          }
+
+         .contact-info div {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .contact-info i {
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 1.3em;
+            flex-shrink: 0;
+             transition: transform 0.3s ease; /* Icon rotation on hover */
+        }
+
+          .contact-info div:hover i {
+             transform: rotate(360deg);
+         }
+
+        .contact-info span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+         }
+         .contact-info a {
+             transition: color 0.3s ease; /* Smooth text color on hover */
+         }
         a {
             color: #0056b3;
             text-decoration: none;
             transition: color 0.3s;
-        }
-        a:hover {
+             text-shadow: 1px 1px 2px #0000001f; /*Text shadow effect*/
+         }
+
+
+          a:hover {
             color: #003a7d;
-        }
+             text-shadow: 2px 2px 4px #0000001f;
+         }
+
         .skills, .languages {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 10px;
-            margin-top: 10px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+            animation-delay: 0.4s;
         }
+
         .skill, .language {
             background-color: #e0f7fa;
             color: #007bff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
+            padding: 7px 12px;
+            border-radius: 7px;
+            font-size: 1em;
             text-transform: capitalize;
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /*Scale and shadow on hover*/
         }
-        .about p {
-            margin-top: 10px;
-            font-size: 0.9em;
-            line-height: 1.4;
+        .skill:hover, .language:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-         /* Translation button */
+
+        .about p {
+            margin-top: 15px;
+            font-size: 1em;
+            line-height: 1.5;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+            animation-delay: 0.5s;
+
+        }
+
+        /* Translation button */
         .translate-button {
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 10px 15px;
+            padding: 12px 18px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 1em;
-            margin-top: 10px;
-            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 15px;
+            border-radius: 7px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
         }
 
         .translate-button:hover {
-           background-color: #45a049;
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
         #english-content {
-            display: none; /* Initially hide the English content */
+            display: none;
         }
         .section {
-          margin-top: 20px;
-        }
+           margin-top: 25px;
+         }
          .item-title {
-            font-weight: 500;
-        }
+           font-weight: 500;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fadeInSlideRight 0.6s ease forwards;
+            animation-delay: 0.5s;
+         }
         .item-subtitle {
-            font-size: 0.95em;
+             font-size: 1em;
             color: #777;
-        }
+             opacity: 0;
+            transform: translateX(20px);
+             animation: fadeInSlideLeft 0.6s ease forwards;
+              animation-delay: 0.6s;
+
+         }
         .item-desc {
-            margin-top: 5px;
-            font-size: 0.9em;
+            margin-top: 7px;
+            font-size: 1em;
             color: #444;
+             opacity: 0;
+             animation: fadeIn 0.6s ease forwards;
+            animation-delay: 0.7s;
+          }
+          .experience {
+             margin-bottom: 20px;
+          }
+           .certificates {
+            margin-top: 25px;
+              opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+            animation-delay: 0.7s;
+           }
+          /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
+         @keyframes fadeInSlideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInSlideLeft {
+            from {
+               opacity: 0;
+               transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                 transform: translateX(0);
+            }
+        }
+        @keyframes fadeInSlideDown {
+            from {
+                 opacity: 0;
+                 transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
     <script>
         function changeLanguage() {
@@ -161,8 +280,22 @@
                 <div class="item-desc">Backend-разработчик: Разрабатывал сервис учета студентов в интересах Института Физической Культуры.
                     Принимал участие в архитектурных решениях, проектировал базы данных. Разработал микросервисы учета результатов ГТО, теоретической подготовки
                     и сдачи нормативов.
+                    <div class="item-desc">
+                    Стэк: Python, FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy, OpenAPI, Swagger, Celery, Redis
+                    </div>
                 </div>
             </div>
+           <div class="experience">
+                <div class="item-title">Extra Logic</div>
+                <div class="item-subtitle">Май 2022 — Ноябрь 2022 (7 месяцев)</div>
+                <div class="item-desc">Стажер-разработчик: Проходил стажировку, реализовывал API аналога OpenAI Forms.
+                  Разрабатывал бэкенд, обеспечивая интеграцию с базой данных. Занимался написанием тестов, для обеспечения стабильной работы сервиса.
+                  <div class="item-desc">
+                  Стэк: Python, Flask, Peewee ORM, SQLite
+                  </div>
+                </div>
+            </div>
+
 
             <h2>Образование</h2>
             <div class="education">
@@ -178,8 +311,9 @@
 
             <h2>Электронные сертификаты</h2>
             <div class="certificates">
-                <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Основы Промышленной Разработки на Python</a></div>
-                <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Основы Программирования на Языке Python</a></div>
+            <div class="item-title"><a href="https://www.dropbox.com/scl/fi/f8mp0r0l4bk80b3wqp6h6/00777b919d6fe9d4777e700d64d751cc.pdf?rlkey=omubkedcfgn3okzuhl8m84jro&st=a3nupt52&dl=0" target="_blank">Благодарность за участие в разработке цифровой программы
+                «Физическая культура и здоровье»</a></div>
+            </div>
             </div>
 
             <h2>Навыки</h2>
@@ -188,18 +322,21 @@
                 <div class="skill">Python</div>
                 <div class="skill">SQLAlchemy</div>
                 <div class="skill">SQL</div>
-                <div class="skill">JSON API</div>
-                <div class="skill">REST API</div>
+                 <div class="skill">REST API</div>
+                 <div class="skill">JSON API</div>
                 <div class="skill">SQLite</div>
                 <div class="skill">PostgreSQL</div>
+                 <div class="skill">Celery</div>
+                <div class="skill">Redis</div>
+                 <div class="skill">OpenAPI</div>
+                <div class="skill">Swagger</div>
                 <div class="skill">Git</div>
-                <div class="skill">OpenAPI</div>
                 <div class="skill">C++</div>
                 <div class="skill">MVC</div>
                 <div class="skill">Qt</div>
                 <div class="skill">Flask</div>
                 <div class="skill">HTML5</div>
-                <div class="skill">CSS</div>
+                 <div class="skill">CSS</div>
             </div>
 
             <h2>Знание языков</h2>
@@ -213,7 +350,7 @@
                 <p>Опыт разработки – 3 года. Основной стек: Python (основной язык), Flask и FastAPI (опыт разработки серверных API и веб-интерфейсов), SQLite и PostgreSQL (СУБД, работаю преимущественно с ORM), Git (использую графическую оболочку).</p>
                 <p>Уверенные знания в HTTP, RestAPI, JSON, OpenAPI; некоторый опыт работы с асинхронностью и многопоточностью. Docker – умею работать и создавать Dockerfile.</p>
                 <p>Предпочитаю удаленную работу или комбинированную занятость, готов обсудить график. Небольшой коммерческий опыт: проект по учету студентов в университете, который сдаем в декабре 2024.</p>
-                <p>В армии не служил и пока не планирую, так как учусь. Надеюсь на удачное сотрудничество!</p>
+               <p>В армии не служил и пока не планирую, так как учусь. Надеюсь на удачное сотрудничество!</p>
             </div>
        </div>
         <div id="english-content" style="display: none;">
@@ -229,15 +366,29 @@
             <h2>Desired Position</h2>
             <div>Backend Developer</div>
 
-            <h2>Work Experience</h2>
+             <h2>Work Experience</h2>
             <div class="experience">
                  <div class="item-title">Herzen State Pedagogical University of Russia</div>
                 <div class="item-subtitle">June 2023 — November 2024 (1 year, 6 months)</div>
                 <div class="item-desc">Backend Developer: Developed a student tracking service for the Institute of Physical Culture.
                      Participated in architectural decisions, designed databases. Developed microservices for tracking GTO results, theoretical training,
                      and standards testing.
+                <div class="item-desc">
+                     Stack: Python, FastAPI, Flask, PostgreSQL, SQLite, SQLAlchemy, OpenAPI, Swagger, Celery, Redis
+                </div>
                  </div>
+             </div>
+            <div class="experience">
+                <div class="item-title">Extra Logic, Omsk</div>
+                 <div class="item-subtitle">May 2022 — November 2022 (7 months)</div>
+                <div class="item-desc">Intern Developer: Completed an internship, implementing an API analog of OpenAI Forms.
+                  Developed the backend, providing integration with the database. Wrote tests to ensure stable operation of the service.
+                  <div class="item-desc">
+                  Stack: Python, Flask, Peewee ORM, SQLite
+                  </div>
+                </div>
             </div>
+
 
             <h2>Education</h2>
             <div class="education">
@@ -253,8 +404,7 @@
 
             <h2>Electronic Certificates</h2>
              <div class="certificates">
-                <div class="item-title">2024 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2301171641&lastName=Ларионов" target="_blank">Foundations of Industrial Development in Python</a></div>
-               <div class="item-title">2023 - <a href="https://lms.yandex.ru/certificate/check/?certNumber=2302171641&lastName=Ларионов" target="_blank">Fundamentals of Programming in Python</a></div>
+                <div class="item-title"><a href="https://www.dropbox.com/scl/fi/f8mp0r0l4bk80b3wqp6h6/00777b919d6fe9d4777e700d64d751cc.pdf?rlkey=omubkedcfgn3okzuhl8m84jro&st=a3nupt52&dl=0" target="_blank">Gratitude for participation in the development of the digital program "Physical Culture and Health"</a></div>
             </div>
 
              <h2>Skills</h2>
@@ -263,17 +413,21 @@
                 <div class="skill">Python</div>
                 <div class="skill">SQLAlchemy</div>
                 <div class="skill">SQL</div>
-                <div class="skill">JSON API</div>
+                  <div class="skill">REST API</div>
+                 <div class="skill">JSON API</div>
                 <div class="skill">SQLite</div>
                 <div class="skill">PostgreSQL</div>
-                <div class="skill">Git</div>
+                 <div class="skill">Celery</div>
+                <div class="skill">Redis</div>
+                <div class="skill">OpenAPI</div>
+                  <div class="skill">Swagger</div>
+                 <div class="skill">Git</div>
                 <div class="skill">C++</div>
                 <div class="skill">MVC</div>
                 <div class="skill">Qt</div>
                 <div class="skill">Flask</div>
                 <div class="skill">HTML5</div>
-                <div class="skill">STL</div>
-                <div class="skill">CSS</div>
+                 <div class="skill">CSS</div>
             </div>
 
             <h2>Languages</h2>
